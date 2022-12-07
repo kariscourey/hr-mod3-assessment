@@ -1002,10 +1002,10 @@ values = [
     -29.236697
 ]
 
-import statistics
+# import statistics
 
 # print(statistics.median(values))
-print(statistics.mode(values))
+# print(statistics.mode(values))
 
 # print(max(set(values), key=values.count))
 
@@ -1013,3 +1013,20 @@ print(statistics.mode(values))
 # mid = len(values) // 2
 # res = (values[mid] + values[~mid]) / 2
 # print(str(res))
+
+counts = {}
+
+for number in values:
+    counts[number] = counts.get(number, 0) + 1
+
+the_max = max(counts.values())
+the_mode = None
+
+for key, value in counts.items():
+    if key == the_max:
+        the_mode = key
+print(the_mode)
+
+mid = len(values) // 2
+sorted_values = sorted(values)
+print(sorted_values(mid))
