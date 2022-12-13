@@ -1,0 +1,3 @@
+Bubble sort first takes in an array of elements and identifies the length of the array. There are then two loops - an outer loop and an inner loop. As the outer loop increments from 0 to the last element in the array, the inner loop increments from 0 to the element that is one less than index of the outer loop element. In the inner loop, the current element is compared to the element at the next index, and, if the former is greater than the latter, the values at the two indexes are swapped; if not, the loop continues. Once both loops have completed, the resulting array is returned.
+
+No recursive calls are made with bubble sort. Worst- and average-case time complexities are O(n2). Larger numbers "bubble" to the end of the array.
